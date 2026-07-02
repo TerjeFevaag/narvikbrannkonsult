@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #f57e23;
+  --color-brand-dark: #111111;
+  --color-brand-black: #000000;
+  --color-brand-white: #ffffff;
+  --color-brand-lightgray: #f5f5f5;
+  --color-brand-gray: #ececec;
+  --color-brand-darkgray: #555555;
+  --color-brand-red: #b20000;
+
+  --font-sans: var(--font-lato), sans-serif;
+  --font-display: var(--font-lato), sans-serif;
+  --font-accent: var(--font-dancing), cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-brand-black);
+}
+
+/* ── Keyframes ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Hero stagger (runs on load, no JS needed) ── */
+.hero-1 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
+.hero-2 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.20s both; }
+.hero-3 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both; }
+.hero-4 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.50s both; }
+.hero-5 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both; }
+
+/* ── Scroll-reveal (controlled by ScrollReveal component) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease,
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in,
+.reveal-fade.in,
+.reveal-scale.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Peak & Fjord — mountain-silhouette clip-paths ── */
+.peak-clip-hero {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+.peak-clip-hero-sm {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+.peak-clip-top {
+  clip-path: polygon(0 4%, 50% 0, 100% 4%, 100% 100%, 0 100%);
+}
