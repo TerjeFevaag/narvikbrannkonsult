@@ -68,6 +68,18 @@ export default function UavhengigKontrollPage() {
             </p>
           </ScrollReveal>
 
+          <ScrollReveal variant="scale" className="mb-10">
+            <div className="relative h-64 lg:h-80 rounded-[20px] overflow-hidden">
+              <Image
+                src="/images/service-uavhengig-kontroll.jpg"
+                alt="Uavhengig kontroll av brannkonsept på byggeplass"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 800px"
+              />
+            </div>
+          </ScrollReveal>
+
           <ScrollReveal>
             <h2 className="text-brand-black text-2xl font-black mb-4">Hva kontrolleres?</h2>
             <ul className="space-y-3 mb-8">

@@ -5,6 +5,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ReviewCard from '@/components/ReviewCard'
 import ScrollReveal from '@/components/ScrollReveal'
+import MountainDivider from '@/components/MountainDivider'
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Narvik | Narvik Brannkonsult',
@@ -132,8 +133,8 @@ const articles = [
 export default function HomePage() {
   return (
     <>
-      {/* ── HERO — tall, bottom-anchored, mountain-silhouette clip ── */}
-      <section className="peak-clip-hero relative min-h-[92vh] flex items-end">
+      {/* ── HERO — tall, bottom-anchored, mountain-silhouette divider ── */}
+      <section className="relative min-h-[88vh] flex items-end overflow-hidden">
         <Image
           src="/images/hero.webp"
           alt="Narvik by med fjell og fjord"
@@ -142,8 +143,8 @@ export default function HomePage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-black/50 to-brand-black/90" />
-        <div className="relative z-10 w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28 pt-32 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-black/20 via-brand-black/55 to-brand-black/90" />
+        <div className="relative z-10 w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 pb-24 lg:pb-32 pt-32 text-center">
           <p className="hero-1 font-accent text-brand-orange text-xl lg:text-2xl mb-4">
             Vi hjelper deg med brannprosjektering i Narvik og Ofoten
           </p>
@@ -179,10 +180,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <MountainDivider className="h-16 lg:h-24" fillClassName="fill-brand-lightgray" />
       </section>
 
-      {/* ── SERVICES — staggered mountain-trail list ── */}
-      <section className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-brand-lightgray">
+      {/* ── SERVICES — alternating zigzag trail ── */}
+      <section className="pt-16 pb-16 lg:pt-24 lg:pb-24 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-16">
             <p className="font-accent text-brand-orange text-xl mb-2">Våre tjenester</p>
@@ -193,32 +195,41 @@ export default function HomePage() {
 
           <div className="relative">
             <div
-              className="hidden lg:block absolute top-10 bottom-10 left-1/2 w-0.5 bg-brand-orange/30"
+              className="hidden lg:block absolute top-2 bottom-2 left-1/2 -translate-x-1/2 w-0.5 bg-brand-orange/30"
               aria-hidden="true"
             />
-            <div className="flex flex-col gap-8 lg:gap-2">
+            <div className="flex flex-col gap-6 lg:gap-10">
               {services.map((service, i) => {
-                const offsets = ['lg:ml-0 lg:mr-auto', 'lg:ml-[8%] lg:mr-auto', 'lg:ml-[16%] lg:mr-auto', 'lg:ml-[24%] lg:mr-auto']
+                const isEven = i % 2 === 0
                 return (
-                  <ScrollReveal key={service.href} delay={i * 100} className={`lg:w-[62%] ${offsets[i % offsets.length]}`}>
-                    <Link
-                      href={service.href}
-                      className="group flex items-center gap-6 bg-brand-white rounded-[30px] p-6 lg:p-7 shadow-sm border border-brand-gray hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                  <div key={service.href} className="relative lg:flex lg:items-center">
+                    <div
+                      className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-orange border-4 border-brand-lightgray z-10"
+                      aria-hidden="true"
+                    />
+                    <ScrollReveal
+                      delay={i * 100}
+                      className={`lg:w-[46%] ${isEven ? 'lg:mr-auto' : 'lg:ml-auto'}`}
                     >
-                      <img
-                        src={service.iconImage}
-                        alt={service.title}
-                        width={64}
-                        height={64}
-                        className="object-contain w-16 h-16 shrink-0 group-hover:scale-110 transition-transform duration-300"
-                      />
-                      <div className="flex-1">
-                        <h3 className="font-bold text-brand-black text-lg lg:text-xl mb-1">{service.title}</h3>
-                        <p className="text-brand-darkgray text-sm leading-relaxed">{service.description}</p>
-                      </div>
-                      <ArrowRight size={20} className="text-brand-orange shrink-0 hidden sm:block group-hover:translate-x-1.5 transition-transform duration-200" />
-                    </Link>
-                  </ScrollReveal>
+                      <Link
+                        href={service.href}
+                        className="group flex items-center gap-6 bg-brand-white rounded-[30px] p-6 lg:p-7 shadow-sm border border-brand-gray hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                      >
+                        <img
+                          src={service.iconImage}
+                          alt={service.title}
+                          width={64}
+                          height={64}
+                          className="object-contain w-16 h-16 shrink-0 group-hover:scale-110 transition-transform duration-300"
+                        />
+                        <div className="flex-1">
+                          <h3 className="font-bold text-brand-black text-lg lg:text-xl mb-1">{service.title}</h3>
+                          <p className="text-brand-darkgray text-sm leading-relaxed">{service.description}</p>
+                        </div>
+                        <ArrowRight size={20} className="text-brand-orange shrink-0 hidden sm:block group-hover:translate-x-1.5 transition-transform duration-200" />
+                      </Link>
+                    </ScrollReveal>
+                  </div>
                 )
               })}
             </div>

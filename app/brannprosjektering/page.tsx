@@ -85,6 +85,18 @@ export default function BrannprosjekteringPage() {
             </ul>
           </ScrollReveal>
 
+          <ScrollReveal variant="scale" className="mb-10">
+            <div className="relative h-64 lg:h-80 rounded-[20px] overflow-hidden">
+              <Image
+                src="/images/service-brannprosjektering.jpg"
+                alt="Brannrådgiver ser gjennom branntegninger"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 800px"
+              />
+            </div>
+          </ScrollReveal>
+
           <ScrollReveal>
             <h2 className="text-brand-black text-2xl font-black mb-4">Risikoklasser, brannklasser og tiltaksklasser</h2>
             <p className="text-brand-darkgray leading-relaxed mb-4">
