@@ -103,8 +103,8 @@ export default function Footer() {
             </ul>
 
             <div className="mt-6 space-y-2 text-sm text-brand-white/60">
-              <a href="tel:+4700000000" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
-                <Phone size={13} /> +47 000 00 000
+              <a href="tel:+4740051437" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
+                <Phone size={13} /> +47 400 51 437
               </a>
               <a href="mailto:post@narvikbrannkonsult.no" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
                 <Mail size={13} /> post@narvikbrannkonsult.no

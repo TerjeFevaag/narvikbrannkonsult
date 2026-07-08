@@ -179,7 +179,7 @@ export default function OmOssPage() {
                 <div className="space-y-2 text-brand-white/60 text-sm">
                   <div className="flex items-center gap-2">
                     <Phone size={14} />
-                    <a href="tel:+4700000000" className="hover:text-brand-orange transition-colors">+47 000 00 000</a>
+                    <a href="tel:+4740051437" className="hover:text-brand-orange transition-colors">+47 400 51 437</a>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail size={14} />

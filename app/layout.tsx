@@ -51,7 +51,7 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   name: 'Narvik Brannkonsult AS',
   description: 'Brannprosjektering og brannkonsept i Narvik',
-  telephone: '+47 000 00 000',
+  telephone: '+47 400 51 437',
   email: 'post@narvikbrannkonsult.no',
   address: {
     '@type': 'PostalAddress',
