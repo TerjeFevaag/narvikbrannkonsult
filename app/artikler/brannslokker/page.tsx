@@ -4,9 +4,9 @@ import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Har du riktig brannslokkeapparat? | Narvik Brannkonsult',
+  title: 'Har du riktig brannslokkeapparat? | Brannkonsult AS',
   description:
-    'Hvilken type brannslokker trenger du? Vi gjennomgår krav til brannslokking i boliger, forskjellen mellom pulver og skum, og riktig bruk. Råd fra Narvik Brannkonsult.',
+    'Hvilken type brannslokker trenger du? Vi gjennomgår krav til brannslokking i boliger, forskjellen mellom pulver og skum, og riktig bruk. Råd fra Brannkonsult AS.',
   alternates: { canonical: 'https://www.narvikbrannkonsult.no/artikler/brannslokker' },
 }
 
@@ -117,7 +117,7 @@ export default function BrannslokkePage() {
                 <p className="leading-relaxed">
                   Trenger du hjelp med brannteknisk rådgivning for din eiendom?{' '}
                   <Link href="/kontakt-oss" className="text-brand-orange font-bold hover:underline">
-                    Kontakt Narvik Brannkonsult
+                    Kontakt Brannkonsult AS
                   </Link>{' '}
                   for en uforpliktende vurdering.
                 </p>

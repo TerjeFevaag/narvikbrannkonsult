@@ -6,7 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Narvik | Narvik Brannkonsult',
+  title: 'Brannprosjektering i Narvik | Brannkonsult AS',
   description:
     'Profesjonell brannprosjektering i Narvik og Ofoten. Sentralt godkjent TKL 1+2. Fast pris fra ca. 15 000 kr. Tilbygg, bruksendring, nybygg — ta kontakt for tilbud.',
   alternates: { canonical: 'https://www.narvikbrannkonsult.no/brannprosjektering' },

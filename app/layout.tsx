@@ -21,18 +21,18 @@ const dancing = Dancing_Script({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.narvikbrannkonsult.no'),
-  title: 'Brannprosjektering i Narvik | Narvik Brannkonsult',
+  title: 'Brannprosjektering i Narvik | Brannkonsult AS',
   description:
-    'Narvik Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: {
     canonical: 'https://www.narvikbrannkonsult.no',
   },
   openGraph: {
-    title: 'Brannprosjektering i Narvik | Narvik Brannkonsult',
+    title: 'Brannprosjektering i Narvik | Brannkonsult AS',
     description:
-      'Narvik Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten.',
+      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten.',
     url: 'https://www.narvikbrannkonsult.no',
-    siteName: 'Narvik Brannkonsult',
+    siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
     type: 'website',
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: '/images/hero.webp',
         width: 1200,
         height: 630,
-        alt: 'Narvik Brannkonsult',
+        alt: 'Brannkonsult AS',
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Narvik Brannkonsult AS',
+  name: 'Brannkonsult AS',
   description: 'Brannprosjektering og brannkonsept i Narvik',
   telephone: '+47 400 51 437',
   email: 'post@narvikbrannkonsult.no',

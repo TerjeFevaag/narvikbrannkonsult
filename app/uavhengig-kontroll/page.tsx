@@ -6,7 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Uavhengig kontroll av brann i Narvik | Narvik Brannkonsult',
+  title: 'Uavhengig kontroll av brann i Narvik | Brannkonsult AS',
   description:
     'Uavhengig kontroll (UK) av brannkonsept i Narvik. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris — kontakt oss.',
   alternates: { canonical: 'https://www.narvikbrannkonsult.no/uavhengig-kontroll' },

@@ -36,7 +36,7 @@ export default function Footer() {
           {/* Col 1: Logo + tagline + socials */}
           <div>
             <div className="mb-5">
-              <Image src="/images/logo-white.png" alt="Narvik Brannkonsult" width={234} height={72} className="object-contain" />
+              <Image src="/images/logo-white.png" alt="Brannkonsult AS" width={234} height={72} className="object-contain" />
             </div>
             <p className="text-brand-white/60 text-sm leading-relaxed mb-6">
               Sentralt godkjent foretak for brannprosjektering i tiltaksklasse 1 og 2. Vi hjelper
@@ -118,7 +118,7 @@ export default function Footer() {
       <div className="border-t border-brand-darkgray/30">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-brand-white/40 text-sm">
-            © {new Date().getFullYear()} Narvik Brannkonsult AS. Alle rettigheter forbeholdt.
+            © {new Date().getFullYear()} Brannkonsult AS. Alle rettigheter forbeholdt.
           </p>
           <Image
             src="/images/sentralt-godkjent.png"

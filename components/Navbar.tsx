@@ -35,7 +35,7 @@ export default function Navbar() {
           <Link href="/">
             <Image
               src={scrolled ? '/images/logo-black.png' : '/images/logo-white.png'}
-              alt="Narvik Brannkonsult"
+              alt="Brannkonsult AS"
               width={234}
               height={65}
               className="object-contain h-[52px] w-auto"

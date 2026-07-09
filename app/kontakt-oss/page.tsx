@@ -6,9 +6,9 @@ import ContactForm from '@/components/ContactForm'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Kontakt Narvik Brannkonsult | Få uforpliktende tilbud',
+  title: 'Kontakt Brannkonsult AS | Få uforpliktende tilbud',
   description:
-    'Kontakt Narvik Brannkonsult for uforpliktende tilbud på brannkonsept og brannprosjektering i Narvik og Ofoten. Sentralt godkjent. Vi svarer innen 24 timer.',
+    'Kontakt Brannkonsult AS for uforpliktende tilbud på brannkonsept og brannprosjektering i Narvik og Ofoten. Sentralt godkjent. Vi svarer innen 24 timer.',
   alternates: { canonical: 'https://www.narvikbrannkonsult.no/kontakt-oss' },
 }
 
@@ -25,7 +25,7 @@ export default function KontaktOssPage() {
             <span>Kontakt oss</span>
           </div>
           <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl font-black">
-            Kontakt Narvik Brannkonsult
+            Kontakt Brannkonsult AS
           </h1>
           <p className="hero-3 text-brand-white/70 text-lg mt-4 max-w-xl mx-auto leading-relaxed">
             Ta kontakt for et uforpliktende tilbud. Vi svarer innen 24 timer.

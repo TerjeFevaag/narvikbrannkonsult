@@ -8,9 +8,9 @@ import ScrollReveal from '@/components/ScrollReveal'
 import MountainDivider from '@/components/MountainDivider'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Narvik | Narvik Brannkonsult',
+  title: 'Brannprosjektering i Narvik | Brannkonsult AS',
   description:
-    'Narvik Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: { canonical: 'https://www.narvikbrannkonsult.no' },
 }
 
@@ -66,7 +66,7 @@ const reviews = [
   },
   {
     quote:
-      'Narvik Brannkonsult er lette å samarbeide med, de svarer raskt, finner gode løsninger og leverer arbeid av jevnt høy kvalitet. Brannotatene deres er praktiske og enkle å bruke.',
+      'Brannkonsult AS er lette å samarbeide med, de svarer raskt, finner gode løsninger og leverer arbeid av jevnt høy kvalitet. Brannotatene deres er praktiske og enkle å bruke.',
     author: 'Daniel Hagelin',
     company: 'Hagelin Byggservice',
   },
@@ -257,7 +257,7 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-brand-white">
         <ScrollReveal variant="fade" className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="font-accent text-brand-orange text-3xl lg:text-5xl leading-snug">
-            &ldquo;Narvik Brannkonsult er lette å samarbeide med, de svarer raskt, finner gode
+            &ldquo;Brannkonsult AS er lette å samarbeide med, de svarer raskt, finner gode
             løsninger og leverer arbeid av jevnt høy kvalitet.&rdquo;
           </p>
           <p className="mt-6 text-brand-darkgray font-bold">Daniel Hagelin — Hagelin Byggservice</p>
