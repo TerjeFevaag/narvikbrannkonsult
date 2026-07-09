@@ -71,7 +71,7 @@ export default function OmOssPage() {
             <ScrollReveal delay={150} className="lg:w-1/2">
               <div className="relative rounded-[30px] overflow-hidden h-80 lg:h-96">
                 <Image
-                  src="/images/about-team.png"
+                  src="/images/om-oss.jpg"
                   alt="Brannkonsult AS team"
                   fill
                   className="object-cover object-top"
