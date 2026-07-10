@@ -50,9 +50,15 @@ export default function KontaktOssPage() {
                   {[
                     { icon: Phone, label: 'Telefon', value: '+47 400 51 437', href: 'tel:+4740051437' },
                     { icon: Mail, label: 'E-post', value: 'post@narvikbrannkonsult.no', href: 'mailto:post@narvikbrannkonsult.no' },
-                    { icon: MapPin, label: 'Adresse', value: '[Gateadresse], Narvik', href: null },
+                    {
+                      icon: MapPin,
+                      label: 'Postadresse',
+                      value: 'Grønnegate 78/88, 9008 Tromsø',
+                      subtext: 'Administreres av Tromsø Brannkonsult AS',
+                      href: null,
+                    },
                     { icon: Clock, label: 'Åpningstider', value: 'Man–Fre 08:00–16:00', href: null },
-                  ].map(({ icon: Icon, label, value, href }, i) => (
+                  ].map(({ icon: Icon, label, value, href, subtext }, i) => (
                     <div key={i} className="flex items-start gap-4">
                       <div className="w-10 h-10 bg-brand-orange/10 rounded-xl flex items-center justify-center shrink-0">
                         <Icon size={18} className="text-brand-orange" />
@@ -66,6 +72,7 @@ export default function KontaktOssPage() {
                         ) : (
                           <p className="font-bold text-brand-black text-sm">{value}</p>
                         )}
+                        {subtext && <p className="text-brand-darkgray text-xs mt-1">{subtext}</p>}
                       </div>
                     </div>
                   ))}
