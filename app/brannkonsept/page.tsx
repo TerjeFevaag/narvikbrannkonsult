@@ -177,7 +177,7 @@ export default function BrannkonseptPage() {
               <div className="flex flex-wrap gap-x-8 gap-y-2">
                 {[
                   { href: '/brannprosjektering', label: 'Brannprosjektering' },
-                  { href: '/branntilsyn', label: 'Branntilsyn' },
+                  { href: '/branninspeksjon', label: 'Branninspeksjon' },
                   { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
                 ].map((link) => (
                   <Link key={link.href} href={link.href} className="text-brand-darkgray hover:text-brand-orange transition-colors text-sm font-medium">

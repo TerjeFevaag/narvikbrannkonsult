@@ -8,7 +8,7 @@ import { Menu, X } from 'lucide-react'
 const navLinks = [
   { href: '/brannkonsept', label: 'Brannkonsept' },
   { href: '/brannprosjektering', label: 'Brannprosjektering' },
-  { href: '/branntilsyn', label: 'Branntilsyn' },
+  { href: '/branninspeksjon', label: 'Branninspeksjon' },
   { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
   { href: '/om-oss', label: 'Om oss' },
 ]

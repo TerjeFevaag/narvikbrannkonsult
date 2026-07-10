@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE_URL, lastModified: new Date(), changeFrequency: 'monthly', priority: 1 },
     { url: `${BASE_URL}/brannkonsept`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/brannprosjektering`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/branntilsyn`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/branninspeksjon`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/uavhengig-kontroll`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/om-oss`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7 },
     { url: `${BASE_URL}/kontakt-oss`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.8 },

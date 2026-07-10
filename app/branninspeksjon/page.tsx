@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Branntilsyn og branninspeksjon i Narvik | Brannkonsult AS',
   description:
     'Branntilsyn og branninspeksjon i Narvik. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Sentralt godkjent — kontakt oss.',
-  alternates: { canonical: 'https://www.narvikbrannkonsult.no/branntilsyn' },
+  alternates: { canonical: 'https://www.narvikbrannkonsult.no/branninspeksjon' },
 }
 
 const faqItems = [
@@ -40,7 +40,7 @@ const faqItems = [
   },
 ]
 
-export default function BranntilsynPage() {
+export default function BranninspeksjonPage() {
   return (
     <>
       <section className="peak-clip-hero-sm relative min-h-[45vh] flex items-end">
@@ -50,7 +50,7 @@ export default function BranntilsynPage() {
           <div className="hero-1 flex items-center justify-center gap-2 text-brand-orange text-sm mb-4">
             <Link href="/" className="hover:underline">Hjem</Link>
             <span>/</span>
-            <span>Branntilsyn</span>
+            <span>Branninspeksjon</span>
           </div>
           <h1 className="hero-2 text-brand-white text-4xl lg:text-5xl font-black">
             Branntilsyn og branninspeksjon i Narvik

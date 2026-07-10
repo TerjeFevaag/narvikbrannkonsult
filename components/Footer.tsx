@@ -88,7 +88,7 @@ export default function Footer() {
               {[
                 { href: '/brannkonsept', label: 'Brannkonsept' },
                 { href: '/brannprosjektering', label: 'Brannprosjektering' },
-                { href: '/branntilsyn', label: 'Branntilsyn' },
+                { href: '/branninspeksjon', label: 'Branninspeksjon' },
                 { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
               ].map((link) => (
                 <li key={link.href}>

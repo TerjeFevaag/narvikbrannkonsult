@@ -57,7 +57,7 @@ export default function ContactForm() {
           <option value="">Velg type</option>
           <option value="brannkonsept">Brannkonsept</option>
           <option value="brannprosjektering">Brannprosjektering</option>
-          <option value="branntilsyn">Branntilsyn</option>
+          <option value="branninspeksjon">Branninspeksjon</option>
           <option value="uavhengig-kontroll">Uavhengig kontroll</option>
           <option value="annet">Annet</option>
         </select>

@@ -140,7 +140,7 @@ export default function UavhengigKontrollPage() {
                 {[
                   { href: '/brannkonsept', label: 'Brannkonsept' },
                   { href: '/brannprosjektering', label: 'Brannprosjektering' },
-                  { href: '/branntilsyn', label: 'Branntilsyn' },
+                  { href: '/branninspeksjon', label: 'Branninspeksjon' },
                 ].map((link) => (
                   <Link key={link.href} href={link.href} className="text-brand-darkgray hover:text-brand-orange transition-colors text-sm font-medium">
                     → {link.label}
