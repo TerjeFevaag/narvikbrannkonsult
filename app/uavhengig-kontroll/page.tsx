@@ -4,12 +4,13 @@ import Link from 'next/link'
 import { CheckCircle, ShieldCheck } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
+import { faqPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Uavhengig kontroll av brann i Narvik | Brannkonsult AS',
   description:
     'Uavhengig kontroll (UK) av brannkonsept i Narvik. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris — kontakt oss.',
-  alternates: { canonical: 'https://www.narvikbrannkonsult.no/uavhengig-kontroll' },
+  alternates: { canonical: 'https://narvikbrannkonsult.no/uavhengig-kontroll' },
 }
 
 const faqItems = [
@@ -35,11 +36,24 @@ const faqItems = [
   },
 ]
 
+const breadcrumbItems = [
+  { name: 'Hjem', path: '/' },
+  { name: 'Uavhengig kontroll', path: '/uavhengig-kontroll' },
+]
+
 export default function UavhengigKontrollPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(faqItems)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbItems)) }}
+      />
       <section className="peak-clip-hero-sm relative min-h-[45vh] flex items-end">
-        <Image src="/images/hero.webp" alt="Narvik by" fill className="object-cover" sizes="100vw" />
+        <Image src="/images/hero.webp" alt="Narvik by — uavhengig kontroll i Narvik og Ofoten" fill priority className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-black/50 to-brand-black/90" />
         <div className="relative z-10 w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 pb-14 pt-24 text-center">
           <div className="hero-1 flex items-center justify-center gap-2 text-brand-orange text-sm mb-4">

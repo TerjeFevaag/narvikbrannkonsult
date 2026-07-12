@@ -6,12 +6,13 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ReviewCard from '@/components/ReviewCard'
 import ScrollReveal from '@/components/ScrollReveal'
 import MountainDivider from '@/components/MountainDivider'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Narvik | Brannkonsult AS',
+  title: 'Brannrådgiver i Narvik | Brannkonsult AS',
   description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
-  alternates: { canonical: 'https://www.narvikbrannkonsult.no' },
+    'Brannkonsult AS er sentralt godkjent brannrådgiver i Narvik og Ofoten. Brannkonsept, brannprosjektering, branninspeksjon og uavhengig kontroll — til fast pris.',
+  alternates: { canonical: 'https://narvikbrannkonsult.no' },
 }
 
 const services = [
@@ -133,6 +134,10 @@ const articles = [
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(faqItems)) }}
+      />
       {/* ── HERO — tall, bottom-anchored, mountain-silhouette divider ── */}
       <section className="relative min-h-[88vh] flex items-end overflow-hidden">
         <Image

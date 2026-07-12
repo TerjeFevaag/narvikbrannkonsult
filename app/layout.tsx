@@ -20,18 +20,18 @@ const dancing = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.narvikbrannkonsult.no'),
-  title: 'Brannprosjektering i Narvik | Brannkonsult AS',
+  metadataBase: new URL('https://narvikbrannkonsult.no'),
+  title: 'Brannrådgiver i Narvik | Brannkonsult AS',
   description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS er sentralt godkjent brannrådgiver i Narvik og Ofoten. Brannkonsept, brannprosjektering, branninspeksjon og uavhengig kontroll — til fast pris.',
   alternates: {
-    canonical: 'https://www.narvikbrannkonsult.no',
+    canonical: 'https://narvikbrannkonsult.no',
   },
   openGraph: {
-    title: 'Brannprosjektering i Narvik | Brannkonsult AS',
+    title: 'Brannrådgiver i Narvik | Brannkonsult AS',
     description:
-      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Narvik og Ofoten.',
-    url: 'https://www.narvikbrannkonsult.no',
+      'Brannkonsult AS er sentralt godkjent brannrådgiver i Narvik og Ofoten. Brannkonsept, brannprosjektering, branninspeksjon og uavhengig kontroll.',
+    url: 'https://narvikbrannkonsult.no',
     siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
     type: 'website',
@@ -58,7 +58,7 @@ const jsonLd = {
     addressLocality: 'Narvik',
     addressCountry: 'NO',
   },
-  url: 'https://www.narvikbrannkonsult.no',
+  url: 'https://narvikbrannkonsult.no',
   priceRange: 'Fra kr 15 000',
   hasCredential: 'Sentralt godkjent tiltaksklasse 1 og 2',
 }

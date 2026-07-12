@@ -4,12 +4,13 @@ import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
+import { faqPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Narvik | Brannkonsult AS',
   description:
     'Profesjonell brannprosjektering i Narvik og Ofoten. Sentralt godkjent TKL 1+2. Fast pris fra ca. 15 000 kr. Tilbygg, bruksendring, nybygg — ta kontakt for tilbud.',
-  alternates: { canonical: 'https://www.narvikbrannkonsult.no/brannprosjektering' },
+  alternates: { canonical: 'https://narvikbrannkonsult.no/brannprosjektering' },
 }
 
 const faqItems = [
@@ -40,11 +41,24 @@ const faqItems = [
   },
 ]
 
+const breadcrumbItems = [
+  { name: 'Hjem', path: '/' },
+  { name: 'Brannprosjektering', path: '/brannprosjektering' },
+]
+
 export default function BrannprosjekteringPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(faqItems)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbItems)) }}
+      />
       <section className="peak-clip-hero-sm relative min-h-[45vh] flex items-end">
-        <Image src="/images/hero.webp" alt="Narvik by" fill className="object-cover" sizes="100vw" />
+        <Image src="/images/hero.webp" alt="Narvik by — brannprosjektering i Narvik og Ofoten" fill priority className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-black/50 to-brand-black/90" />
         <div className="relative z-10 w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 pb-14 pt-24 text-center">
           <div className="hero-1 flex items-center justify-center gap-2 text-brand-orange text-sm mb-4">

@@ -2,19 +2,30 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Har du riktig brannslokkeapparat? | Brannkonsult AS',
   description:
     'Hvilken type brannslokker trenger du? Vi gjennomgår krav til brannslokking i boliger, forskjellen mellom pulver og skum, og riktig bruk. Råd fra Brannkonsult AS.',
-  alternates: { canonical: 'https://www.narvikbrannkonsult.no/artikler/brannslokker' },
+  alternates: { canonical: 'https://narvikbrannkonsult.no/artikler/brannslokker' },
 }
+
+const breadcrumbItems = [
+  { name: 'Hjem', path: '/' },
+  { name: 'Artikler' },
+  { name: 'Riktig brannslokker', path: '/artikler/brannslokker' },
+]
 
 export default function BrannslokkePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbItems)) }}
+      />
       <section className="peak-clip-hero-sm relative min-h-[35vh] flex items-end">
-        <Image src="/images/hero.webp" alt="Narvik by" fill className="object-cover" sizes="100vw" />
+        <Image src="/images/hero.webp" alt="Narvik by sett fra fjorden" fill priority className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-black/50 to-brand-black/90" />
         <div className="relative z-10 w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-20 text-center">
           <div className="hero-1 flex items-center justify-center gap-2 text-brand-orange text-sm mb-4">
