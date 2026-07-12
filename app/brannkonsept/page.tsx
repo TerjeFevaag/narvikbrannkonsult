@@ -44,6 +44,11 @@ const faqItems = [
     answer:
       'Leveringstid avhenger av prosjektets omfang og vår arbeidsbelastning. For de fleste prosjekter leverer vi innen 5–10 virkedager etter mottatt bestilling og komplett underlag. Har du tidsfrist, oppgi dette i forespørselen.',
   },
+  {
+    question: 'Tilbyr dere brannkonsept utenfor Narvik?',
+    answer:
+      'Ja. I tillegg til Narvik og Ofoten tar vi oppdrag i store deler av Nord-Norge — blant annet Harstad, Tromsø, Bodø, Mo i Rana, Lofoten og Vesterålen. Ta kontakt uansett hvor prosjektet ditt befinner seg, så finner vi en løsning.',
+  },
 ]
 
 const breadcrumbItems = [

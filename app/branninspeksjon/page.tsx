@@ -39,6 +39,11 @@ const faqItems = [
     answer:
       'Ja — alle eksisterende bygninger skal oppgraderes til et minimum tilsvarende det som gjaldt for nybygg i 1985 (BF85). For mange eldre bygg i Narvik og Ofoten betyr dette at det er behov for tiltak. Vi hjelper deg med å vurdere hva som er nødvendig.',
   },
+  {
+    question: 'Tilbyr dere branninspeksjon utenfor Narvik?',
+    answer:
+      'Ja. I tillegg til Narvik og Ofoten tar vi oppdrag i store deler av Nord-Norge — blant annet Harstad, Tromsø, Bodø, Mo i Rana, Lofoten og Vesterålen. Ta kontakt uansett hvor bygget ditt befinner seg, så finner vi en løsning.',
+  },
 ]
 
 const breadcrumbItems = [

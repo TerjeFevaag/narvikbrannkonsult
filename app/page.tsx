@@ -103,7 +103,7 @@ const faqItems = [
   {
     question: 'Tar dere oppdrag utenfor Narvik?',
     answer:
-      'Vi hjelper kunder i Narvik, Ofoten og hele Nordland, og tar oppdrag over hele landet.',
+      'Ja. I tillegg til Narvik og Ofoten tar vi oppdrag i store deler av Nord-Norge — blant annet Harstad, Tromsø, Bodø, Mo i Rana, Lofoten og Vesterålen — og over hele landet ved behov.',
   },
 ]
 

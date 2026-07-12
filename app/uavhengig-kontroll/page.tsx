@@ -34,6 +34,11 @@ const faqItems = [
     answer:
       'Ja — det er faktisk et krav at den som utfører UK ikke er den samme som har prosjektert. Vi kan ta på oss uavhengig kontroll av brannkonsept utarbeidet av andre rådgivere.',
   },
+  {
+    question: 'Tilbyr dere uavhengig kontroll utenfor Narvik?',
+    answer:
+      'Ja. I tillegg til Narvik og Ofoten tar vi oppdrag i store deler av Nord-Norge — blant annet Harstad, Tromsø, Bodø, Mo i Rana, Lofoten og Vesterålen. Ta kontakt uansett hvor prosjektet ditt befinner seg, så finner vi en løsning.',
+  },
 ]
 
 const breadcrumbItems = [

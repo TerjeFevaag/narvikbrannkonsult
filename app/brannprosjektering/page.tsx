@@ -39,6 +39,11 @@ const faqItems = [
     answer:
       'Vi trenger adresse, antall etasjer og bruksareal, plantegninger og en kort prosjektbeskrivelse. Jo mer informasjon vi får, jo mer presist kan vi prise oppdraget. Send det til oss på e-post eller via kontaktskjemaet.',
   },
+  {
+    question: 'Tilbyr dere brannprosjektering utenfor Narvik?',
+    answer:
+      'Ja. I tillegg til Narvik og Ofoten tar vi oppdrag i store deler av Nord-Norge — blant annet Harstad, Tromsø, Bodø, Mo i Rana, Lofoten og Vesterålen. Ta kontakt uansett hvor prosjektet ditt befinner seg, så finner vi en løsning.',
+  },
 ]
 
 const breadcrumbItems = [
