@@ -58,6 +58,7 @@ const jsonLd = {
     addressLocality: 'Narvik',
     addressCountry: 'NO',
   },
+  areaServed: ['Narvik', 'Harstad', 'Tromsø', 'Bodø', 'Mo i Rana', 'Lofoten', 'Vesterålen'],
   url: 'https://narvikbrannkonsult.no',
   priceRange: 'Fra kr 15 000',
   hasCredential: 'Sentralt godkjent tiltaksklasse 1 og 2',
