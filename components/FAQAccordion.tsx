@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { Plus, Minus } from 'lucide-react'
 
 interface FAQItem {
   question: string
-  answer: string
+  answer: ReactNode
 }
 
 export default function FAQAccordion({ items }: { items: FAQItem[] }) {

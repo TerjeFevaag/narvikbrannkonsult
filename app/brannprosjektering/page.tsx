@@ -119,7 +119,16 @@ export default function BrannprosjekteringPage() {
           <ScrollReveal>
             <h2 className="text-brand-black text-2xl font-black mb-4">Risikoklasser, brannklasser og tiltaksklasser</h2>
             <p className="text-brand-darkgray leading-relaxed mb-4">
-              Risikoklasse (RKL 1–6) beskriver konsekvensen av en brann ut fra bygningens bruk, mens brannklasse (BKL 1–4) fastsettes ut fra risikoklasse og antall etasjer. Tiltaksklasse (TKL 1–3) beskriver kompleksiteten i selve prosjekteringsoppgaven og bestemmer hvilke krav som stilles til foretaket som utfører arbeidet.
+              Risikoklasse (RKL 1–6) beskriver konsekvensen av en brann ut fra bygningens bruk, mens brannklasse (BKL 1–4) fastsettes ut fra risikoklasse og antall etasjer. Tiltaksklasse (TKL 1–3) beskriver kompleksiteten i selve prosjekteringsoppgaven og bestemmer hvilke krav som stilles til foretaket som utfører arbeidet. Søker du en bredere innføring i regelverket, har fagfolkene i Brannkonsult AS samlet{' '}
+              <a
+                href="https://www.brannkonsult.no/brannprosjektering/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-orange hover:underline"
+              >
+                en gjennomgang av brannprosjektering og regelverket
+              </a>
+              .
             </p>
           </ScrollReveal>
 

@@ -16,8 +16,22 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'Hva er forskjellen på branntilsyn og branninspeksjon?',
-    answer:
-      'Branntilsyn er en kontroll utført av kommunens brann- og redningsetat. Branninspeksjon er en frivillig, grundigere gjennomgang du kan bestille fra en privat brannrådgiver som oss. Vi gir en uavhengig vurdering av byggets brannsikkerhet og konkrete anbefalinger.',
+    answer: (
+      <>
+        Branntilsyn er en kontroll utført av kommunens brann- og redningsetat. Branninspeksjon er en frivillig, grundigere gjennomgang du kan bestille fra en privat brannrådgiver som oss. Vi gir en uavhengig vurdering av byggets brannsikkerhet og konkrete anbefalinger. Vil du lese mer generelt om temaet, har Brannkonsult AS satt sammen{' '}
+        <a
+          href="https://www.brannkonsult.no/branninspeksjon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-brand-orange hover:underline"
+        >
+          en samleartikkel om branninspeksjon
+        </a>
+        .
+      </>
+    ),
+    answerText:
+      'Branntilsyn er en kontroll utført av kommunens brann- og redningsetat. Branninspeksjon er en frivillig, grundigere gjennomgang du kan bestille fra en privat brannrådgiver som oss. Vi gir en uavhengig vurdering av byggets brannsikkerhet og konkrete anbefalinger. Vil du lese mer generelt om temaet, har Brannkonsult AS satt sammen en samleartikkel om branninspeksjon.',
   },
   {
     question: 'Hvem er ansvarlig for brannsikkerheten i et sameie?',

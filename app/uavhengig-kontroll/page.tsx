@@ -83,7 +83,16 @@ export default function UavhengigKontrollPage() {
           <ScrollReveal>
             <h2 className="text-brand-black text-2xl font-black mb-4">Når er det krav om uavhengig kontroll?</h2>
             <p className="text-brand-darkgray leading-relaxed mb-8">
-              I henhold til SAK10 § 14-2 er det krav om uavhengig kontroll av prosjektering av brann når tiltaket er i tiltaksklasse 2 (TKL 2) eller høyere. Dette gjelder de fleste næringsbygg, boligblokker og bygninger med særskilte krav til brannsikkerhet.
+              I henhold til SAK10 § 14-2 er det krav om uavhengig kontroll av prosjektering av brann når tiltaket er i tiltaksklasse 2 (TKL 2) eller høyere. Dette gjelder de fleste næringsbygg, boligblokker og bygninger med særskilte krav til brannsikkerhet. Brannkonsult AS har i tillegg publisert{' '}
+              <a
+                href="https://www.brannkonsult.no/uavhengig-kontroll/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-orange hover:underline"
+              >
+                en fagartikkel om uavhengig kontroll av brann
+              </a>{' '}
+              for deg som ønsker en bredere innføring.
             </p>
           </ScrollReveal>
 

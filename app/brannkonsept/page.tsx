@@ -16,8 +16,22 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'Hva trenger jeg til mitt prosjekt — brannkonsept eller brannteknisk notat?',
-    answer:
-      'Et brannkonsept er en mer helhetlig rapport som beskriver brannsikkerhetsnivået til hele byggverket. Et brannteknisk notat er enklere og brukes for mindre tiltak. Vi veileder deg til riktig løsning for ditt prosjekt — ta kontakt for en gratis vurdering.',
+    answer: (
+      <>
+        Et brannkonsept er en mer helhetlig rapport som beskriver brannsikkerhetsnivået til hele byggverket. Et brannteknisk notat er enklere og brukes for mindre tiltak. Vi veileder deg til riktig løsning for ditt prosjekt — ta kontakt for en gratis vurdering. Brannkonsult AS har også skrevet{' '}
+        <a
+          href="https://www.brannkonsult.no/brannkonsept/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-brand-orange hover:underline"
+        >
+          en grundigere fagartikkel om brannkonsept
+        </a>{' '}
+        for deg som vil sette deg enda mer inn i temaet.
+      </>
+    ),
+    answerText:
+      'Et brannkonsept er en mer helhetlig rapport som beskriver brannsikkerhetsnivået til hele byggverket. Et brannteknisk notat er enklere og brukes for mindre tiltak. Vi veileder deg til riktig løsning for ditt prosjekt — ta kontakt for en gratis vurdering. Brannkonsult AS har også skrevet en grundigere fagartikkel om brannkonsept for deg som vil sette deg enda mer inn i temaet.',
   },
   {
     question: 'Er befaring nødvendig for brannkonsept?',
