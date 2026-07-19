@@ -50,7 +50,7 @@ const stats = [
   { number: '1200+', label: 'Prosjekter gjennomført' },
   { number: 'TKL 1+2', label: 'Sentralt godkjent' },
   { number: 'Fast pris', label: 'Der det er mulig' },
-  { number: 'Hele landet', label: 'Vi tar oppdrag overalt' },
+  { number: 'Ofoten', label: 'Og store deler av Nord-Norge' },
 ]
 
 const reviews = [
@@ -83,7 +83,7 @@ const faqItems = [
   {
     question: 'Hva koster brannprosjektering i Narvik?',
     answer:
-      'Prisen varierer etter omfang og kompleksitet. Et brannkonsept i tiltaksklasse 2 starter hos oss fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris.',
+      'Det avhenger av hvor stort og komplisert prosjektet er. Til sammenligning starter et brannkonsept i tiltaksklasse 2 på rundt 15 000 kr ekskl. mva., inkludert branntegninger — og du vet alltid prisen før vi setter i gang med noe som helst.',
   },
   {
     question: 'Trenger jeg brannprosjektering for mitt prosjekt?',
@@ -113,21 +113,21 @@ const articles = [
     image: '/images/article-pipebrann.jpg',
     title: 'Forebygg pipebrann med enkle grep',
     excerpt:
-      'Er du i faresonen for å kunne få brann i skorsteinen? Les om hva som forårsaker pipebrann og enkle tiltak for å redusere risikoen.',
+      'Mange hytter og eneboliger i Narvik varmes opp med vedovn gjennom en lang fyringssesong. Vi går gjennom hva som forårsaker pipebrann, og hvordan du forebygger det.',
   },
   {
     href: '/artikler/brannslokker',
     image: '/images/article-brannslukker.jpg',
     title: 'Har du riktig brannslokkeapparat?',
     excerpt:
-      'Vet du hvilken type brannslokker du trenger i hjemmet? Vi gjennomgår krav og forskjellen mellom pulver- og skumapparater.',
+      'En del boliger og hytter i Narvik og Ofoten ligger et stykke unna nærmeste brannstasjon. Da blir riktig slokkeutstyr hjemme enda viktigere — vi går gjennom hvilken type du bør ha.',
   },
   {
     href: '/artikler/roykvarsler',
     image: '/images/article-roykvarsler.jpg',
     title: 'Riktig røykvarsler redder liv',
     excerpt:
-      'Er du godt nok sikret hvis det oppstår brann om natten? Vi forklarer krav til røykvarslere og riktig plassering.',
+      'Fra eneboliger i sentrum til hytter høyt i fjellsiden — riktig plassering av røykvarsler varierer med boligtypen. Vi forklarer kravene og hva som gjelder for deg.',
   },
 ]
 
@@ -157,8 +157,9 @@ export default function HomePage() {
             Brannprosjektering i Narvik
           </h1>
           <p className="hero-3 text-brand-white/80 text-base lg:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-            Sentralt godkjent foretak med over 1200 gjennomførte prosjekter. Fast pris, rask
-            levering og personlig oppfølging — fra enkle tilbygg til store leilighetsbygg.
+            Fra boligfelt og hytter i det bratte fjellterrenget til næringsbygg nede ved
+            malmhavna — vi har prosjektert brannsikkerhet i begge deler av Narvik. Fastpris og
+            personlig oppfølging fra første kontakt til ferdig dokumentasjon.
           </p>
           <div className="hero-4 flex flex-wrap justify-center gap-4 mb-10">
             <Link

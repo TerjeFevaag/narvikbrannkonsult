@@ -59,17 +59,17 @@ export default function RoykVarslerPage() {
             <div className="prose prose-lg max-w-none text-brand-darkgray">
               <ScrollReveal>
                 <p className="text-lg leading-relaxed mb-6">
-                  Er du godt nok sikret hvis det oppstår en brann om natten? De fleste dødsbranner skjer mens beboerne sover, og uten røykvarsler som vekker deg i tide kan konsekvensene bli fatale. En god røykvarsler gir deg verdifull tid til å evakuere. Men ikke alle røykvarslere er like — og riktig plassering er avgjørende.
+                  Er du godt nok sikret hvis det begynner å brenne om natten? De fleste dødsbranner skjer mens beboerne sover, og uten en røykvarsler som vekker deg i tide kan konsekvensene bli fatale. I Narvik bor folk i alt fra leiligheter i sentrum til eldre eneboliger og hytter høyt oppe i fjellsiden — og riktig plassering av røykvarsler varierer noe med boligtypen. Her går vi gjennom kravene, og hva som faktisk gjelder for deg.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
                 <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Lovkrav til røykvarslere i Norge</h2>
                 <p className="leading-relaxed mb-6">
-                  Forskrift om brannforebygging krever at alle boliger skal ha minst én røykvarsler per etasje, og at det skal være røykvarsler utenfor soverom. I praksis betyr dette at du bør ha røykvarsler i alle rom der det er naturlig opphold, samt i korridorer og trapper.
+                  Forskrift om brannforebygging krever minst én røykvarsler per etasje, og at det er røykvarsler utenfor soverom. I praksis bør du ha varsler i alle rom med naturlig opphold, samt i korridorer og trapper — det gjelder like fullt for en enebolig i sentrum som for en hytte i fjellsiden.
                 </p>
                 <p className="leading-relaxed mb-6">
-                  Røykvarsleren skal varsle med lydsignal på minimum 85 dB(A) ved soveromsdøren. Alarmen skal være sterk nok til å vekke en sovende person.
+                  Røykvarsleren skal varsle med lydsignal på minimum 85 dB(A) ved soveromsdøren — sterkt nok til å vekke en sovende person.
                 </p>
               </ScrollReveal>
 
@@ -77,11 +77,11 @@ export default function RoykVarslerPage() {
                 <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Ionisasjon vs. optisk røykvarsler</h2>
                 <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Ionisasjonsvarsler</h3>
                 <p className="leading-relaxed mb-6">
-                  Ionisasjonsvarslere bruker en liten mengde radioaktivt materiale for å registrere røykpartikler. De er svært raskest til å oppdage hurtigbrennende branner med lite synlig røyk, men kan gi falske alarmer fra matlaging og damp. De er vanligst i eldre boliger, men anbefales ikke lenger av norske myndigheter.
+                  Bruker en liten mengde radioaktivt materiale for å registrere røykpartikler. Raskest til å oppdage hurtigbrennende branner med lite synlig røyk, men gir lettere falske alarmer fra matlaging og damp. Vanligst i eldre boliger, men anbefales ikke lenger av norske myndigheter.
                 </p>
                 <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Optisk (fotoelektrisk) røykvarsler</h3>
                 <p className="leading-relaxed mb-6">
-                  Optiske røykvarslere bruker lysstråler for å oppdage røykpartikler. De er bedre til å oppdage ulmebranner — den vanligste typen boligbrann — som produserer mye tykk røyk. Optiske varslere gir færre falske alarmer fra matlaging. Disse anbefales av Direktoratet for samfunnssikkerhet og beredskap (DSB).
+                  Bruker lysstråler for å oppdage røykpartikler, og er bedre til å fange opp ulmebranner — den vanligste typen boligbrann — som gir mye tykk røyk. Gir også færre falske alarmer fra matlaging, og er varslertypen Direktoratet for samfunnssikkerhet og beredskap (DSB) anbefaler.
                 </p>
               </ScrollReveal>
 
@@ -89,7 +89,7 @@ export default function RoykVarslerPage() {
                 <div className="bg-brand-lightgray rounded-[20px] p-6 mb-8">
                   <h3 className="font-bold text-brand-black text-lg mb-3">Anbefaling fra Brannkonsult AS</h3>
                   <p className="text-brand-darkgray text-sm leading-relaxed">
-                    Velg optiske røykvarslere for boliger. De oppdager ulmebranner — den vanligste typen — raskere og gir færre falske alarmer. Sørg for at alle varslere er koblet sammen (radio- eller kabelforbundet) slik at alle alarmer går av samtidig.
+                    Velg optiske røykvarslere til boligen. De fanger opp ulmebranner raskere og gir færre falske alarmer enn ionisasjonsvarslere. Koble gjerne alle varslere sammen, enten trådløst eller via kabel, slik at et signal ett sted i huset utløser alarm overalt.
                   </p>
                 </div>
               </ScrollReveal>
@@ -105,6 +105,7 @@ export default function RoykVarslerPage() {
                     'I stue og oppholdsrom',
                     'Ikke direkte på kjøkken — røyk fra matlaging gir falsk alarm (bruk varme-/komfyrvakt i stedet)',
                     'Ikke i fuktige bad eller garasje',
+                    'På hytta: velg gjerne batteridrevne varslere med lang levetid, siden det ofte er langt til nærmeste nabo som kan høre en enkeltstående alarm',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <span className="text-brand-orange mt-1">•</span>
@@ -127,7 +128,7 @@ export default function RoykVarslerPage() {
                   Dersom én røykvarsler oppdager røyk, er det avgjørende at alle varslerne i huset aktiveres. Et koblet system — enten via kabel eller trådløst — sikrer at hele familien varsles uavhengig av hvor i huset brannen oppstår. Dette er spesielt viktig i store boliger og fleretasjesbygg.
                 </p>
                 <p className="leading-relaxed">
-                  Trenger du brannteknisk vurdering av en eiendom i Narvik?{' '}
+                  Trenger du brannteknisk vurdering av en bolig, hytte eller et større bygg i Narvik-området?{' '}
                   <Link href="/kontakt-oss" className="text-brand-orange font-bold hover:underline">
                     Ta kontakt med Brannkonsult AS
                   </Link>{' '}

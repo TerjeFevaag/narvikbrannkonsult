@@ -102,7 +102,7 @@ export default function BrannkonseptPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-              Et brannkonsept er en skriftlig rapport som oppsummerer bygningens brannsikkerhetsnivå. Ved byggesaker krever kommunen som regel prosjekteringsdokumentasjon på brannkonseptnivå — en helhetlig overordnet plan som ivaretar brannsikkerheten både for det omsøkte tiltaket og den øvrige bygningsmassen. Vi hjelper private, arkitekter, entreprenører og utbyggere i Narvik og omegn med å utarbeide komplette brannkonsept til fast pris.
+              Et brannkonsept er en skriftlig rapport som viser hvordan bygget ditt ivaretar brannsikkerheten — både for det du skal bygge, og for resten av bygningsmassen det inngår i. De fleste byggesaker i Narvik kommune krever et slikt dokument før søknaden kan behandles, enten det gjelder et nytt boligfelt i fjellsiden eller et tilbygg til et eldre hus i sentrum. Vi utarbeider brannkonsept for private, arkitekter, entreprenører og utbyggere i hele Ofoten.
             </p>
           </ScrollReveal>
 
@@ -161,7 +161,7 @@ export default function BrannkonseptPage() {
           {/* Pull-quote break */}
           <ScrollReveal variant="fade" className="my-14 text-center">
             <p className="font-accent text-brand-orange text-3xl lg:text-4xl leading-snug">
-              &ldquo;Vi selger ingen produkter eller håndverkertjenester — kun uavhengig, faglig rådgivning.&rdquo;
+              &ldquo;Vi har ingen produkter å selge — bare uavhengig, faglig rådgivning du kan stole på.&rdquo;
             </p>
           </ScrollReveal>
 
@@ -190,7 +190,7 @@ export default function BrannkonseptPage() {
                 <div>
                   <h3 className="font-bold text-brand-black text-lg mb-2">Pris</h3>
                   <p className="text-brand-darkgray">
-                    Fra ca. <strong className="text-brand-black">15 000 kr</strong> i tiltaksklasse 2, inkl. branntegninger og ekskl. mva. Alltid fastpris.
+                    Et brannkonsept i tiltaksklasse 2 starter fra ca. <strong className="text-brand-black">15 000 kr</strong>, ekskl. mva. og inkl. branntegninger — alltid til fastpris, uansett hvor i Ofoten prosjektet ligger.
                   </p>
                 </div>
               </div>

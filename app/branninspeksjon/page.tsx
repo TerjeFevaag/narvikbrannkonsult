@@ -95,7 +95,7 @@ export default function BranninspeksjonPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-              Har kommunen vært på branntilsyn, eller ønsker du å kartlegge brannsikkerheten i en eldre bygning i Narvik? Vi hjelper borettslag, sameier, næringsbygg og eiendomseiere med branninspeksjon og vurdering av byggets brannsikkerhet.
+              Har kommunen vært på branntilsyn, eller lurer du på tilstanden i en eldre bygård i sentrum eller en hytte lenger opp i fjellsiden? Vi hjelper borettslag, sameier, næringsbygg og private eiendomseiere i Narvik med branninspeksjon og en reell vurdering av byggets brannsikkerhet.
             </p>
           </ScrollReveal>
 
@@ -138,7 +138,7 @@ export default function BranninspeksjonPage() {
           {/* Pull-quote break */}
           <ScrollReveal variant="fade" className="my-14 text-center">
             <p className="font-accent text-brand-orange text-3xl lg:text-4xl leading-snug">
-              &ldquo;Eier er ansvarlig for brannsikkerheten — vi hjelper deg gjennom prosessen.&rdquo;
+              &ldquo;Det er eier som har ansvaret for brannsikkerheten — vi hjelper deg med å ta det på alvor.&rdquo;
             </p>
           </ScrollReveal>
 

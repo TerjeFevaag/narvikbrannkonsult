@@ -81,7 +81,7 @@ export default function BrannprosjekteringPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-              Brannprosjektering betyr skriftlig planlegging av nødvendig brannsikring i og rundt bygningen. Vi sørger for at ditt bygg i Narvik oppfyller alle krav i plan- og bygningsloven og brann- og eksplosjonsvernloven — til fast pris.
+              Brannprosjektering er den skriftlige planleggingen som viser at bygget ditt oppfyller kravene i plan- og bygningsloven og brann- og eksplosjonsvernloven. Enten det er et næringsbygg ned mot havna eller et bolighus i fjellsiden, finner vi løsninger som er tilpasset både bygget og terrenget det står i — til fast pris.
             </p>
           </ScrollReveal>
 

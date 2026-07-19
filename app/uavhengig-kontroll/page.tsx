@@ -76,7 +76,7 @@ export default function UavhengigKontrollPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-              I mange byggeprosjekter er det krav om uavhengig kontroll (UK) av brannsikkerheten. Kontrollen skal sikre at brannkonseptet er i tråd med gjeldende forskrifter og at prosjekteringen holder nødvendig kvalitet. Dette gir økt trygghet, reduserer risiko for feil og bidrar til en mer forutsigbar byggeprosess.
+              I mange byggeprosjekter er det krav om uavhengig kontroll (UK) av brannsikkerheten — enten det er et leilighetsbygg i sentrum eller et næringsbygg ved havna. Kontrollen skal sikre at brannkonseptet er i tråd med gjeldende forskrifter og at prosjekteringen holder nødvendig kvalitet, slik at du slipper overraskelser senere i byggesaken.
             </p>
           </ScrollReveal>
 
@@ -130,7 +130,7 @@ export default function UavhengigKontrollPage() {
           {/* Pull-quote break */}
           <ScrollReveal variant="fade" className="my-14 text-center">
             <p className="font-accent text-brand-orange text-3xl lg:text-4xl leading-snug">
-              &ldquo;Vi er en nøytral part og har ingen interesser i valg av løsning.&rdquo;
+              &ldquo;Som uavhengig kontrollør har vi ingen interesse i hvilken løsning du velger — bare at den holder mål.&rdquo;
             </p>
           </ScrollReveal>
 
