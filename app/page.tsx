@@ -20,28 +20,28 @@ const services = [
     iconImage: '/images/icon-brannkonsept.gif',
     title: 'Brannkonsept',
     description:
-      'Kommunen krever et brannkonsept ved de fleste byggesaker. Vi utarbeider helhetlige brannkonsept som ivaretar brannsikkerheten i ditt prosjekt — fra garasjer til leilighetsbygg.',
+      'De fleste byggesaker i Narvik — fra rehabilitering av eldre bygg til nye næringsbygg ved havna — krever et brannkonsept før søknaden godkjennes. Vi utarbeider dokumentasjonen som viser at brannsikkerheten er ivaretatt.',
     href: '/brannkonsept',
   },
   {
     iconImage: '/images/icon-brannprosjektering.gif',
     title: 'Brannprosjektering',
     description:
-      'Vi sørger for at bygget ditt oppfyller alle krav til brannsikkerhet, og finner praktiske løsninger som sparer både tid og kostnader. Fast pris der det er mulig.',
+      'Enten det er et offentlig bygg, et næringsbygg eller en bolig, sørger vi for at prosjekteringen oppfyller brannkravene — med praktiske løsninger og fast pris der det er mulig.',
     href: '/brannprosjektering',
   },
   {
     iconImage: '/images/icon-branntilsyn.png',
     title: 'Branninspeksjon',
     description:
-      'Har du fått pålegg etter branntilsyn, eller ønsker du en grundig gjennomgang av byggets brannsikkerhet? Vi inspiserer hele bygningen og utarbeider tilstandsrapport.',
+      'Har kommunen gitt pålegg etter tilsyn, eller trenger et eldre bygg i Narvik en grundig gjennomgang før rehabilitering? Vi kartlegger tilstanden og leverer en tilstandsrapport.',
     href: '/branninspeksjon',
   },
   {
     iconImage: '/images/icon-uavhengig-kontroll.png',
     title: 'Uavhengig kontroll',
     description:
-      'I mange byggeprosjekter er det krav om uavhengig kontroll av brannsikkerheten. Vi sikrer at brannkonseptet er i tråd med gjeldende forskrifter.',
+      'Bygger du i tiltaksklasse 2 eller høyere — vanlig for større nærings- og industribygg — er uavhengig kontroll av brannkonseptet et krav. Vi sikrer at dokumentasjonen holder mål.',
     href: '/uavhengig-kontroll',
   },
 ]
