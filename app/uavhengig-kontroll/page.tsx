@@ -37,7 +37,7 @@ const faqItems = [
   {
     question: 'Tilbyr dere uavhengig kontroll utenfor Narvik?',
     answer:
-      'Ja. I tillegg til Narvik og Ofoten tar vi oppdrag i store deler av Nord-Norge — blant annet Harstad, Tromsø, Bodø, Mo i Rana, Lofoten og Vesterålen. Ta kontakt uansett hvor prosjektet ditt befinner seg, så finner vi en løsning.',
+      'Ja. I tillegg til Narvik og Ofoten tar vi oppdrag i store deler av Nordland — blant annet Ballangen, Evenes, Tjeldsund, Hamarøy, Lofoten og Vesterålen. Ta kontakt uansett hvor prosjektet ditt befinner seg, så finner vi en løsning.',
   },
 ]
 
