@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: 'Hva trenger jeg til mitt prosjekt — brannkonsept eller brannteknisk notat?',
+    question: 'Trenger jeg brannkonsept, eller holder det med et enklere notat?',
     answer: (
       <>
-        Et brannkonsept er en mer helhetlig rapport som beskriver brannsikkerhetsnivået til hele byggverket. Et brannteknisk notat er enklere og brukes for mindre tiltak. Vi veileder deg til riktig løsning for ditt prosjekt — ta kontakt for en gratis vurdering. Brannkonsult AS har også skrevet{' '}
+        Det avhenger av hvor omfattende tiltaket er. Skal du bygge nytt eller gjøre en større ombygging, er det som regel brannkonsept kommunen ber om. Gjelder det derimot en mindre jobb — for eksempel å bytte planløsning i én leilighet — holder det ofte med et enklere brannteknisk notat. Vi ser gjennom prosjektet ditt gratis og sier ifra hva som faktisk trengs. Brannkonsult AS har også skrevet{' '}
         <a
           href="https://www.brannkonsult.no/brannkonsept/"
           target="_blank"
@@ -31,32 +31,32 @@ const faqItems = [
       </>
     ),
     answerText:
-      'Et brannkonsept er en mer helhetlig rapport som beskriver brannsikkerhetsnivået til hele byggverket. Et brannteknisk notat er enklere og brukes for mindre tiltak. Vi veileder deg til riktig løsning for ditt prosjekt — ta kontakt for en gratis vurdering. Brannkonsult AS har også skrevet en grundigere fagartikkel om brannkonsept for deg som vil sette deg enda mer inn i temaet.',
+      'Det avhenger av hvor omfattende tiltaket er. Skal du bygge nytt eller gjøre en større ombygging, er det som regel brannkonsept kommunen ber om. Gjelder det derimot en mindre jobb — for eksempel å bytte planløsning i én leilighet — holder det ofte med et enklere brannteknisk notat. Vi ser gjennom prosjektet ditt gratis og sier ifra hva som faktisk trengs. Brannkonsult AS har også skrevet en grundigere fagartikkel om brannkonsept for deg som vil sette deg enda mer inn i temaet.',
   },
   {
-    question: 'Er befaring nødvendig for brannkonsept?',
+    question: 'Må dere befare bygget først?',
     answer:
-      'For nybygg og enklere saker er det sjelden nødvendig med befaring. Takket være digitale kartdata og gode tegningsunderlag kan vi i mange tilfeller utarbeide brannkonseptet uten fysisk befaring. Vi gir beskjed dersom vi ser behov for det.',
+      'Sjelden. De fleste prosjekter i Narvik lar seg løse med situasjonsplan, plantegninger og bilder sendt digitalt. Er bygget uoversiktlig, eller mangler det oppdaterte tegninger — noe som ikke er uvanlig i eldre bygg i sentrum — avtaler vi en befaring.',
   },
   {
-    question: 'Hva koster et brannkonsept i Narvik?',
+    question: 'Hva koster et brannkonsept, og hva er inkludert?',
     answer:
-      'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris slik at du slipper ubehagelige overraskelser. Send oss informasjon om prosjektet for et nøyaktig tilbud.',
+      'Et brannkonsept i tiltaksklasse 2 starter normalt på rundt 15 000 kr ekskl. mva., og inkluderer branntegninger. Vi oppgir alltid fastpris skriftlig før arbeidet starter, uansett hvor omfattende prosjektet er.',
   },
   {
-    question: 'Tilbyr dere håndverkertjenester?',
+    question: 'Krever rehabilitering av et eldre bygg i Narvik brannkonsept?',
     answer:
-      'Nei — vi er en nøytral rådgiver og selger ingen produkter eller håndverkertjenester. Dette sikrer at rådgivningen vår alltid er uavhengig og i ditt beste interesse.',
+      'Ofte, ja. Eldre bygg skal som minimum oppfylle kravene som gjaldt for nybygg i 1985 (BF85), og en rehabilitering eller bruksendring vil derfor gjerne utløse krav om brannkonsept som del av byggesaken — særlig i den eldre bygningsmassen i og rundt sentrum.',
   },
   {
-    question: 'Hva trengs for å få et pristilbud?',
+    question: 'Hva må jeg sende for å få et pristilbud?',
     answer:
-      'For å gi et nøyaktig tilbud trenger vi: adresse/matrikkel, antall etasjer og bruksareal, tegninger (situasjonsplan og plantegninger) og en kort prosjektbeskrivelse. Send dette til oss så sender vi tilbud innen 24 timer.',
+      'Adresse eller matrikkelnummer, plantegninger (situasjonsplan og planløsning), og en kort beskrivelse av hva som skal gjøres. Med det på plass sender vi som regel et fastpristilbud innen 24 timer.',
   },
   {
-    question: 'Hvor lang tid tar det å utarbeide et brannkonsept?',
+    question: 'Hvor lang tid tar det å få et ferdig brannkonsept?',
     answer:
-      'Leveringstid avhenger av prosjektets omfang og vår arbeidsbelastning. For de fleste prosjekter leverer vi innen 5–10 virkedager etter mottatt bestilling og komplett underlag. Har du tidsfrist, oppgi dette i forespørselen.',
+      'For de fleste prosjekter regner vi 5–10 virkedager fra vi mottar bestilling og fullstendig underlag. Har du en konkret frist, oppgi den når du sender forespørselen, så planlegger vi leveransen deretter.',
   },
   {
     question: 'Tilbyr dere brannkonsept utenfor Narvik?',
@@ -107,7 +107,7 @@ export default function BrannkonseptPage() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="text-brand-black text-2xl font-black mb-4">Hva inneholder et brannkonsept?</h2>
+            <h2 className="text-brand-black text-2xl font-black mb-4">Dette inngår i et brannkonsept</h2>
             <p className="text-brand-darkgray leading-relaxed mb-6">
               Et komplett brannkonsept fra Brannkonsult AS inneholder:
             </p>
@@ -166,14 +166,14 @@ export default function BrannkonseptPage() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <h2 className="text-brand-black text-2xl font-black mb-4">Hva vi tilbyr</h2>
+            <h2 className="text-brand-black text-2xl font-black mb-4">Dette får du fra oss</h2>
             <ul className="space-y-3 mb-8">
               {[
-                'Utarbeidelse av komplett brannkonsept',
-                'Branntekniske tegninger (brannceller, rømningsveier)',
-                'Ansvarsrett overfor kommunen i tiltaksklasse 1 og 2',
-                'Fastpris — ingen skjulte kostnader',
-                'Levering innen 5–10 virkedager',
+                'Komplett brannkonsept, klart for byggesøknaden',
+                'Branntegninger med brannceller og rømningsveier',
+                'Ansvarsrett i tiltaksklasse 1 og 2',
+                'Fastpris avtalt skriftlig på forhånd',
+                '5–10 virkedagers leveringstid',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                   <CheckCircle size={18} className="text-brand-orange shrink-0 mt-0.5" />
