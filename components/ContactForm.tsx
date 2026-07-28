@@ -1,12 +1,54 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
+import { useState, type ChangeEvent, type FormEvent } from 'react'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
+
+const MAX_FILES = 3
+const MAX_FILE_SIZE = 4 * 1024 * 1024 // 4 MB
+const MAX_TOTAL_SIZE = 4 * 1024 * 1024 // 4 MB
+const ACCEPTED_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp', 'image/gif']
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const [files, setFiles] = useState<File[]>([])
+  const [fileError, setFileError] = useState('')
+
+  function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
+    const selected = Array.from(e.target.files ?? [])
+    setFileError('')
+
+    if (selected.length > MAX_FILES) {
+      setFileError(`Du kan laste opp maks ${MAX_FILES} filer.`)
+      setFiles([])
+      e.target.value = ''
+      return
+    }
+    const invalidType = selected.find((f) => !ACCEPTED_TYPES.includes(f.type))
+    if (invalidType) {
+      setFileError(`"${invalidType.name}" er ikke en støttet filtype. Bruk PDF, JPG, PNG, WEBP eller GIF.`)
+      setFiles([])
+      e.target.value = ''
+      return
+    }
+    const tooBig = selected.find((f) => f.size > MAX_FILE_SIZE)
+    if (tooBig) {
+      setFileError(`"${tooBig.name}" er for stor. Maks 4 MB per fil.`)
+      setFiles([])
+      e.target.value = ''
+      return
+    }
+    const totalSize = selected.reduce((sum, f) => sum + f.size, 0)
+    if (totalSize > MAX_TOTAL_SIZE) {
+      setFileError('Filene er til sammen for store. Maks 4 MB totalt.')
+      setFiles([])
+      e.target.value = ''
+      return
+    }
+
+    setFiles(selected)
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -15,19 +57,18 @@ export default function ContactForm() {
 
     const form = e.currentTarget
     const data = new FormData(form)
-    const payload = {
-      navn: data.get('navn'),
-      epost: data.get('epost'),
-      telefon: data.get('telefon'),
-      prosjekttype: data.get('prosjekttype'),
-      melding: data.get('melding'),
-    }
+    const payload = new FormData()
+    payload.set('navn', data.get('navn') as string)
+    payload.set('epost', data.get('epost') as string)
+    payload.set('telefon', data.get('telefon') as string)
+    payload.set('prosjekttype', data.get('prosjekttype') as string)
+    payload.set('melding', data.get('melding') as string)
+    files.forEach((file) => payload.append('vedlegg', file))
 
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: payload,
       })
       const result = await res.json().catch(() => null)
 
@@ -39,6 +80,7 @@ export default function ContactForm() {
 
       setStatus('success')
       form.reset()
+      setFiles([])
     } catch {
       setErrorMessage('Kunne ikke nå serveren. Sjekk internettforbindelsen og prøv igjen.')
       setStatus('error')
@@ -133,6 +175,34 @@ export default function ContactForm() {
           className="w-full px-4 py-3 border border-brand-gray rounded-[10px] text-brand-black placeholder:text-brand-darkgray focus:outline-none focus:border-brand-orange transition-colors resize-none"
           placeholder="Beskriv prosjektet ditt kort..."
         />
+      </div>
+
+      <div>
+        <label htmlFor="vedlegg" className="block text-sm font-bold text-brand-black mb-1.5">
+          Vedlegg (tegninger, bilder)
+        </label>
+        <input
+          type="file"
+          id="vedlegg"
+          name="vedlegg"
+          multiple
+          accept=".pdf,.jpg,.jpeg,.png,.webp,.gif"
+          onChange={handleFileChange}
+          className="w-full text-sm text-brand-darkgray file:mr-4 file:py-2.5 file:px-4 file:rounded-[8px] file:border-0 file:bg-brand-orange/10 file:text-brand-orange file:font-bold file:cursor-pointer hover:file:bg-brand-orange/20 border border-brand-gray rounded-[10px] px-2 py-1.5"
+        />
+        <p className="text-xs text-brand-darkgray mt-1.5">
+          PDF eller bilder, maks {MAX_FILES} filer og 4 MB totalt.
+        </p>
+        {fileError && (
+          <p className="text-xs font-bold text-red-600 mt-1.5" role="alert">
+            {fileError}
+          </p>
+        )}
+        {!fileError && files.length > 0 && (
+          <p className="text-xs text-brand-darkgray mt-1.5">
+            {files.length} {files.length === 1 ? 'fil valgt' : 'filer valgt'}: {files.map((f) => f.name).join(', ')}
+          </p>
+        )}
       </div>
 
       {status === 'error' && (
