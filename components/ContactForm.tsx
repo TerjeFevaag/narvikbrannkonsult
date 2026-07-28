@@ -18,30 +18,35 @@ export default function ContactForm() {
 
   function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
     const selected = Array.from(e.target.files ?? [])
+    e.target.value = '' // allow re-opening the picker to add more files afterwards
+    if (selected.length === 0) return
     setFileError('')
 
-    if (selected.length > MAX_FILES) {
-      setFileError(`Du kan laste opp maks ${MAX_FILES} filer.`)
-      setFiles([])
-      e.target.value = ''
-      return
-    }
     const invalidType = selected.find((f) => !ACCEPTED_TYPES.includes(f.type))
     if (invalidType) {
       setFileError(`"${invalidType.name}" er ikke en støttet filtype. Bruk PDF, JPG, PNG, WEBP eller GIF.`)
-      setFiles([])
-      e.target.value = ''
       return
     }
     const tooBig = selected.find((f) => f.size > MAX_FILE_SIZE)
     if (tooBig) {
       setFileError(`"${tooBig.name}" er for stor. Maks 20 MB per fil.`)
-      setFiles([])
-      e.target.value = ''
       return
     }
 
-    setFiles(selected)
+    setFiles((prev) => {
+      const existingKeys = new Set(prev.map((f) => `${f.name}-${f.size}`))
+      const merged = [...prev, ...selected.filter((f) => !existingKeys.has(`${f.name}-${f.size}`))]
+      if (merged.length > MAX_FILES) {
+        setFileError(`Du kan laste opp maks ${MAX_FILES} filer. Fjern en fil for å legge til en ny.`)
+        return prev
+      }
+      return merged
+    })
+  }
+
+  function removeFile(index: number) {
+    setFileError('')
+    setFiles((prev) => prev.filter((_, i) => i !== index))
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -207,10 +212,22 @@ export default function ContactForm() {
             {fileError}
           </p>
         )}
-        {!fileError && files.length > 0 && (
-          <p className="text-xs text-brand-darkgray mt-1.5">
-            {files.length} {files.length === 1 ? 'fil valgt' : 'filer valgt'}: {files.map((f) => f.name).join(', ')}
-          </p>
+        {files.length > 0 && (
+          <ul className="mt-2 space-y-1">
+            {files.map((f, i) => (
+              <li key={`${f.name}-${f.size}`} className="flex items-center justify-between gap-2 text-xs text-brand-darkgray bg-brand-lightgray rounded-[6px] px-3 py-1.5">
+                <span className="truncate">{f.name}</span>
+                <button
+                  type="button"
+                  onClick={() => removeFile(i)}
+                  className="text-brand-orange font-bold shrink-0 hover:underline"
+                  aria-label={`Fjern ${f.name}`}
+                >
+                  Fjern
+                </button>
+              </li>
+            ))}
+          </ul>
         )}
       </div>
 
