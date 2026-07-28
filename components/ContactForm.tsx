@@ -19,6 +19,8 @@ const CONTENT_TYPE_BY_EXT: Record<string, string> = {
   '.gif': 'image/gif',
   '.dwg': 'application/acad',
   '.dxf': 'application/dxf',
+  '.doc': 'application/msword',
+  '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 }
 
 function getExtension(filename: string) {
@@ -41,7 +43,7 @@ export default function ContactForm() {
 
     const invalidType = selected.find((f) => !(getExtension(f.name) in CONTENT_TYPE_BY_EXT))
     if (invalidType) {
-      setFileError(`"${invalidType.name}" er ikke en støttet filtype. Bruk PDF, JPG, PNG, GIF, WEBP, DWG eller DXF.`)
+      setFileError(`"${invalidType.name}" er ikke en støttet filtype. Bruk PDF, JPG, PNG, GIF, WEBP, DWG, DXF, DOC eller DOCX.`)
       return
     }
     const tooBig = selected.find((f) => f.size > MAX_FILE_SIZE)
@@ -218,12 +220,12 @@ export default function ContactForm() {
           id="vedlegg"
           name="vedlegg"
           multiple
-          accept=".pdf,.jpg,.jpeg,.png,.webp,.gif,.dwg,.dxf"
+          accept=".pdf,.jpg,.jpeg,.png,.webp,.gif,.dwg,.dxf,.doc,.docx"
           onChange={handleFileChange}
           className="w-full text-sm text-brand-darkgray file:mr-4 file:py-2.5 file:px-4 file:rounded-[8px] file:border-0 file:bg-brand-orange/10 file:text-brand-orange file:font-bold file:cursor-pointer hover:file:bg-brand-orange/20 border border-brand-gray rounded-[10px] px-2 py-1.5"
         />
         <p className="text-xs text-brand-darkgray mt-1.5">
-          Maks {MAX_FILES} filer, 20 MB per fil. PDF, JPG, PNG, GIF, WEBP, DWG eller DXF.
+          Maks {MAX_FILES} filer, 20 MB per fil. PDF, JPG, PNG, GIF, WEBP, DWG, DXF, DOC eller DOCX.
         </p>
         {fileError && (
           <p className="text-xs font-bold text-red-600 mt-1.5" role="alert">

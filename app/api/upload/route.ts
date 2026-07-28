@@ -18,6 +18,8 @@ export async function POST(request: Request): Promise<NextResponse> {
             'image/gif',
             'application/acad',
             'application/dxf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
           ],
           addRandomSuffix: true,
           maximumSizeInBytes: 20 * 1024 * 1024,
