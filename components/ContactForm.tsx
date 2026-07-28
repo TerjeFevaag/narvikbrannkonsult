@@ -7,7 +7,24 @@ type Status = 'idle' | 'submitting' | 'success' | 'error'
 
 const MAX_FILES = 4
 const MAX_FILE_SIZE = 20 * 1024 * 1024 // 20 MB
-const ACCEPTED_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp', 'image/gif']
+
+// Browsers often report an empty or generic MIME type for CAD formats like
+// .dwg/.dxf, so file type is validated by extension rather than File.type.
+const CONTENT_TYPE_BY_EXT: Record<string, string> = {
+  '.pdf': 'application/pdf',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.png': 'image/png',
+  '.webp': 'image/webp',
+  '.gif': 'image/gif',
+  '.dwg': 'application/acad',
+  '.dxf': 'application/dxf',
+}
+
+function getExtension(filename: string) {
+  const i = filename.lastIndexOf('.')
+  return i === -1 ? '' : filename.slice(i).toLowerCase()
+}
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>('idle')
@@ -22,9 +39,9 @@ export default function ContactForm() {
     if (selected.length === 0) return
     setFileError('')
 
-    const invalidType = selected.find((f) => !ACCEPTED_TYPES.includes(f.type))
+    const invalidType = selected.find((f) => !(getExtension(f.name) in CONTENT_TYPE_BY_EXT))
     if (invalidType) {
-      setFileError(`"${invalidType.name}" er ikke en støttet filtype. Bruk PDF, JPG, PNG, WEBP eller GIF.`)
+      setFileError(`"${invalidType.name}" er ikke en støttet filtype. Bruk PDF, JPG, PNG, GIF, WEBP, DWG eller DXF.`)
       return
     }
     const tooBig = selected.find((f) => f.size > MAX_FILE_SIZE)
@@ -64,6 +81,7 @@ export default function ContactForm() {
         const blob = await upload(files[i].name, files[i], {
           access: 'public',
           handleUploadUrl: '/api/upload',
+          contentType: CONTENT_TYPE_BY_EXT[getExtension(files[i].name)],
         })
         vedlegg.push({ url: blob.url, filename: files[i].name })
       }
@@ -200,12 +218,12 @@ export default function ContactForm() {
           id="vedlegg"
           name="vedlegg"
           multiple
-          accept=".pdf,.jpg,.jpeg,.png,.webp,.gif"
+          accept=".pdf,.jpg,.jpeg,.png,.webp,.gif,.dwg,.dxf"
           onChange={handleFileChange}
           className="w-full text-sm text-brand-darkgray file:mr-4 file:py-2.5 file:px-4 file:rounded-[8px] file:border-0 file:bg-brand-orange/10 file:text-brand-orange file:font-bold file:cursor-pointer hover:file:bg-brand-orange/20 border border-brand-gray rounded-[10px] px-2 py-1.5"
         />
         <p className="text-xs text-brand-darkgray mt-1.5">
-          PDF eller bilder, maks {MAX_FILES} filer og 20 MB per fil.
+          Maks {MAX_FILES} filer, 20 MB per fil. PDF, JPG, PNG, GIF, WEBP, DWG eller DXF.
         </p>
         {fileError && (
           <p className="text-xs font-bold text-red-600 mt-1.5" role="alert">
