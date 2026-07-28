@@ -1,12 +1,12 @@
 'use client'
 
 import { useState, type ChangeEvent, type FormEvent } from 'react'
+import { upload } from '@vercel/blob/client'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
-const MAX_FILES = 3
-const MAX_FILE_SIZE = 4 * 1024 * 1024 // 4 MB
-const MAX_TOTAL_SIZE = 4 * 1024 * 1024 // 4 MB
+const MAX_FILES = 4
+const MAX_FILE_SIZE = 20 * 1024 * 1024 // 20 MB
 const ACCEPTED_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp', 'image/gif']
 
 export default function ContactForm() {
@@ -14,6 +14,7 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('')
   const [files, setFiles] = useState<File[]>([])
   const [fileError, setFileError] = useState('')
+  const [uploadLabel, setUploadLabel] = useState('')
 
   function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
     const selected = Array.from(e.target.files ?? [])
@@ -34,14 +35,7 @@ export default function ContactForm() {
     }
     const tooBig = selected.find((f) => f.size > MAX_FILE_SIZE)
     if (tooBig) {
-      setFileError(`"${tooBig.name}" er for stor. Maks 4 MB per fil.`)
-      setFiles([])
-      e.target.value = ''
-      return
-    }
-    const totalSize = selected.reduce((sum, f) => sum + f.size, 0)
-    if (totalSize > MAX_TOTAL_SIZE) {
-      setFileError('Filene er til sammen for store. Maks 4 MB totalt.')
+      setFileError(`"${tooBig.name}" er for stor. Maks 20 MB per fil.`)
       setFiles([])
       e.target.value = ''
       return
@@ -57,18 +51,32 @@ export default function ContactForm() {
 
     const form = e.currentTarget
     const data = new FormData(form)
-    const payload = new FormData()
-    payload.set('navn', data.get('navn') as string)
-    payload.set('epost', data.get('epost') as string)
-    payload.set('telefon', data.get('telefon') as string)
-    payload.set('prosjekttype', data.get('prosjekttype') as string)
-    payload.set('melding', data.get('melding') as string)
-    files.forEach((file) => payload.append('vedlegg', file))
 
     try {
+      const vedlegg: { url: string; filename: string }[] = []
+      for (let i = 0; i < files.length; i++) {
+        setUploadLabel(`Laster opp fil ${i + 1} av ${files.length}...`)
+        const blob = await upload(files[i].name, files[i], {
+          access: 'public',
+          handleUploadUrl: '/api/upload',
+        })
+        vedlegg.push({ url: blob.url, filename: files[i].name })
+      }
+      setUploadLabel('')
+
+      const payload = {
+        navn: data.get('navn'),
+        epost: data.get('epost'),
+        telefon: data.get('telefon'),
+        prosjekttype: data.get('prosjekttype'),
+        melding: data.get('melding'),
+        vedlegg,
+      }
+
       const res = await fetch('/api/contact', {
         method: 'POST',
-        body: payload,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       })
       const result = await res.json().catch(() => null)
 
@@ -82,6 +90,7 @@ export default function ContactForm() {
       form.reset()
       setFiles([])
     } catch {
+      setUploadLabel('')
       setErrorMessage('Kunne ikke nå serveren. Sjekk internettforbindelsen og prøv igjen.')
       setStatus('error')
     }
@@ -191,7 +200,7 @@ export default function ContactForm() {
           className="w-full text-sm text-brand-darkgray file:mr-4 file:py-2.5 file:px-4 file:rounded-[8px] file:border-0 file:bg-brand-orange/10 file:text-brand-orange file:font-bold file:cursor-pointer hover:file:bg-brand-orange/20 border border-brand-gray rounded-[10px] px-2 py-1.5"
         />
         <p className="text-xs text-brand-darkgray mt-1.5">
-          PDF eller bilder, maks {MAX_FILES} filer og 4 MB totalt.
+          PDF eller bilder, maks {MAX_FILES} filer og 20 MB per fil.
         </p>
         {fileError && (
           <p className="text-xs font-bold text-red-600 mt-1.5" role="alert">
@@ -216,7 +225,7 @@ export default function ContactForm() {
         disabled={status === 'submitting'}
         className="w-full bg-brand-orange text-brand-white font-bold px-8 py-4 rounded-[10px] hover:opacity-90 transition-opacity text-base disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === 'submitting' ? 'Sender...' : 'Send forespørsel'}
+        {status === 'submitting' ? (uploadLabel || 'Sender...') : 'Send forespørsel'}
       </button>
     </form>
   )
