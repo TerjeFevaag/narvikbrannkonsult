@@ -48,7 +48,7 @@ export default function KontaktOssPage() {
           <div className="flex flex-col lg:flex-row gap-16">
             {/* Form */}
             <ScrollReveal className="lg:w-[60%]">
-              <h2 className="text-brand-black text-2xl font-black mb-6">Send oss en forespørsel</h2>
+              <h2 className="text-brand-black text-2xl font-black mb-6">Fortell oss om prosjektet ditt</h2>
               <ContactForm />
             </ScrollReveal>
 

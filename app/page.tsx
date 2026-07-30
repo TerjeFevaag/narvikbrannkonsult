@@ -56,26 +56,28 @@ const stats = [
 const reviews = [
   {
     quote:
-      'Jeg fikk hjelp med en ny boenhet i Bergen Sentrum. Rask tilbakemelding og grundig rapport. Anbefaler andre å bruke Brannkonsult AS!',
-    author: 'Jan-David Antonsen',
-    company: 'Anton Arkitekt AS',
+      'Vi har samarbeidet med Brannkonsult i flere prosjekter. Dyktige, hyggelige og tilgjengelige. Har levert grundig arbeid til riktig tid.',
+    author: 'Eirik Fonn',
+    company: 'Skog Arkitekter AS',
   },
   {
     quote:
-      'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Ny oppdatert rapport innen kort tid. Alt til bra priser.',
-    author: 'Vegard Hals',
+      'Meget rask og effektiv leveranse av brannkonsept i forbindelse med utbygging av loft over leilighet. Raske svar på e-post ved eventuelle spørsmål.',
+    author: 'Terje Stokke',
+    date: '13. desember 2021',
   },
   {
     quote:
-      'Brannkonsult AS er lette å samarbeide med, de svarer raskt, finner gode løsninger og leverer arbeid av jevnt høy kvalitet. Brannotatene deres er praktiske og enkle å bruke.',
-    author: 'Daniel Hagelin',
-    company: 'Hagelin Byggservice',
+      'Godt samarbeid og leverer på kort varsel. Hyggelig å snakke med Thomas Hansen som er ansvarlig prosjekterende.',
+    author: 'Michel Zurawiecki',
+    company: 'Husar Arkitekter AS',
+    date: '15. september 2022',
   },
   {
     quote:
-      'Brannkonsult AS er faglig dyktige, ryddige og løsningsorienterte. Det er viktig for oss som arkitekter og for våre kunder.',
-    author: 'Jon Cederbrand',
-    company: 'Jon Cederbrand Arkitektur AS',
+      'Fornøyd kunde. Brannkonsult har vært behjelpelige med løpende problemstillinger og endringer vi har vært i behov av. Levert alt i henhold til avtale. Alt i alt, meget fornøyd.',
+    author: 'Elin Wahl',
+    date: '22. november 2022',
   },
 ]
 
@@ -263,10 +265,10 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-brand-white">
         <ScrollReveal variant="fade" className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="font-accent text-brand-orange text-3xl lg:text-5xl leading-snug">
-            &ldquo;Brannkonsult AS er lette å samarbeide med, de svarer raskt, finner gode
-            løsninger og leverer arbeid av jevnt høy kvalitet.&rdquo;
+            &ldquo;Vi har samarbeidet med Brannkonsult i flere prosjekter. Dyktige,
+            hyggelige og tilgjengelige. Har levert grundig arbeid til riktig tid.&rdquo;
           </p>
-          <p className="mt-6 text-brand-darkgray font-bold">Daniel Hagelin — Hagelin Byggservice</p>
+          <p className="mt-6 text-brand-darkgray font-bold">Eirik Fonn — Skog Arkitekter AS</p>
         </ScrollReveal>
       </section>
 
