@@ -143,9 +143,9 @@ export default function OmOssPage() {
       <section className="py-16 lg:py-24 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="max-w-3xl mx-auto text-center">
-            <h2 className="text-brand-black text-3xl font-black mb-5">Nøytral rådgiver</h2>
+            <h2 className="text-brand-black text-3xl font-black mb-5">Vi leverer, ikke bare rådgir</h2>
             <p className="text-brand-darkgray leading-relaxed mb-4">
-              Brannkonsult AS selger ingen produkter og tilbyr ingen håndverkertjenester — men vi er langt mer enn en rådgivende part. Vi utarbeider brannkonsept, gjennomfører uavhengig kontroll av konsept, står for brannprosjektering og leverer all nødvendig dokumentasjon riktig utfylt til kommunen. Det sikrer at leveransen alltid er i ditt beste interesse, og ikke påvirket av salgsinteresser.
+              Vi leverer — ikke bare mener noe. Vi utarbeider brannkonsept, gjennomfører uavhengig kontroll, prosjekterer brannsikkerheten i bygget ditt, og sørger for at all dokumentasjon er komplett og korrekt levert til kommunen. Og fordi vi verken selger produkter eller håndverkertjenester, er anbefalingene våre alltid styrt av ett hensyn: hva som faktisk er best for prosjektet ditt.
             </p>
             <p className="text-brand-darkgray leading-relaxed">
               Mange av kundene våre er arkitekter og entreprenører som setter pris på at vi er lett tilgjengelige og raskt kan svare på spørsmål underveis i prosjektet — uten ekstra kostnad.
