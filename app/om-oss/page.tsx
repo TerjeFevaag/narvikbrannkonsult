@@ -148,7 +148,7 @@ export default function OmOssPage() {
               Vi leverer — ikke bare mener noe. Vi utarbeider brannkonsept, gjennomfører uavhengig kontroll, prosjekterer brannsikkerheten i bygget ditt, og sørger for at all dokumentasjon er komplett og korrekt levert til kommunen. Og fordi vi verken selger produkter eller håndverkertjenester, er anbefalingene våre alltid styrt av ett hensyn: hva som faktisk er best for prosjektet ditt.
             </p>
             <p className="text-brand-darkgray leading-relaxed">
-              Mange av kundene våre er arkitekter og entreprenører som setter pris på at vi er lett tilgjengelige og raskt kan svare på spørsmål underveis i prosjektet — uten ekstra kostnad.
+              Kundene våre spenner fra private som bygger garasje eller enkelt tilbygg, til arkitekter og entreprenører på store næringsprosjekter. Uansett størrelse setter de pris på det samme: at vi er lett tilgjengelige og svarer raskt på spørsmål underveis — uten ekstra kostnad.
             </p>
           </ScrollReveal>
         </div>
