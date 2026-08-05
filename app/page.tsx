@@ -56,28 +56,27 @@ const stats = [
 const reviews = [
   {
     quote:
-      'Vi har samarbeidet med Brannkonsult i flere prosjekter. Dyktige, hyggelige og tilgjengelige. Har levert grundig arbeid til riktig tid.',
-    author: 'Eirik Fonn',
-    company: 'Skog Arkitekter AS',
-  },
-  {
-    quote:
-      'Meget rask og effektiv leveranse av brannkonsept i forbindelse med utbygging av loft over leilighet. Raske svar på e-post ved eventuelle spørsmål.',
+      'Har benyttet Brannkonsult både til brannprosjektering og prosjektering av rømningsveier for et nytt hus i Oslo. Er godt fornøyd med utført arbeid og pris.',
     author: 'Terje Stokke',
     date: '13. desember 2021',
   },
   {
     quote:
+      'Meget rask og effektiv leveranse av brannkonsept i forbindelse med utbygging av loft over leilighet. Raske svar på e-post ved eventuelle spørsmål.',
+    author: 'Anders Kofoed',
+    date: '14. november 2021',
+  },
+  {
+    quote:
       'Godt samarbeid og leverer på kort varsel. Hyggelig å snakke med Thomas Hansen som er ansvarlig prosjekterende.',
-    author: 'Michel Zurawiecki',
-    company: 'Husar Arkitekter AS',
-    date: '15. september 2022',
+    author: 'Saba Naganathan',
+    date: '2. september 2022',
   },
   {
     quote:
       'Fornøyd kunde. Brannkonsult har vært behjelpelige med løpende problemstillinger og endringer vi har vært i behov av. Levert alt i henhold til avtale. Alt i alt, meget fornøyd.',
-    author: 'Elin Wahl',
-    date: '22. november 2022',
+    author: 'Khoa Henrik Luong',
+    date: '16. november 2022',
   },
 ]
 
@@ -265,10 +264,10 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-brand-white">
         <ScrollReveal variant="fade" className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="font-accent text-brand-orange text-3xl lg:text-5xl leading-snug">
-            &ldquo;Vi har samarbeidet med Brannkonsult i flere prosjekter. Dyktige,
-            hyggelige og tilgjengelige. Har levert grundig arbeid til riktig tid.&rdquo;
+            &ldquo;Godt samarbeid og leverer på kort varsel. Hyggelig å snakke med
+            Thomas Hansen som er ansvarlig prosjekterende.&rdquo;
           </p>
-          <p className="mt-6 text-brand-darkgray font-bold">Eirik Fonn — Skog Arkitekter AS</p>
+          <p className="mt-6 text-brand-darkgray font-bold">Saba Naganathan</p>
         </ScrollReveal>
       </section>
 
