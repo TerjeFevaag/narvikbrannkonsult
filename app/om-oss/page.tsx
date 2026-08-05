@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 }
 
 const process = [
-  { step: '1', title: 'Kontakt oss', desc: 'Send forespørsel med informasjon om prosjektet.' },
-  { step: '2', title: 'Vi sender tilbud', desc: 'Du mottar fastpristilbud innen 24 timer.' },
-  { step: '3', title: 'Du aksepterer', desc: 'Bekreft oppdraget — vi starter arbeidet.' },
-  { step: '4', title: 'Vi prosjekterer', desc: 'Erfarne brannrådgivere utarbeider dokumentasjonen.' },
-  { step: '5', title: 'Dokumentasjon levert', desc: 'Komplett leveranse klar for kommunen.' },
+  { step: '1', title: 'Fortell oss om prosjektet', desc: 'Send inn tegninger, adresse og en kort beskrivelse av hva du skal bygge.' },
+  { step: '2', title: 'Du får et fastprisforslag', desc: 'Vi regner ut prisen ut fra omfang og sender skriftlig tilbud, normalt innen 24 timer.' },
+  { step: '3', title: 'Du bekrefter oppdraget', desc: 'Sier du ja, setter vi i gang umiddelbart.' },
+  { step: '4', title: 'Vi utfører arbeidet', desc: 'Befaring i Narvik og Ofoten der det trengs — ellers løses det digitalt.' },
+  { step: '5', title: 'Du mottar ferdig dokumentasjon', desc: 'Komplett og klar til å sendes inn til kommunen.' },
 ]
 
 const breadcrumbItems = [
@@ -157,8 +157,11 @@ export default function OmOssPage() {
       {/* Process */}
       <section className="py-16 lg:py-24 bg-brand-white">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal className="text-center mb-12">
-            <h2 className="text-brand-black text-3xl font-black">Vår prosess</h2>
+          <ScrollReveal className="text-center mb-12 max-w-2xl mx-auto">
+            <h2 className="text-brand-black text-3xl font-black mb-4">Slik blir prosjektet ditt løst</h2>
+            <p className="text-brand-darkgray leading-relaxed">
+              Brannkonsult AS er selskapet bak Narvik Brannkonsult, og de fleste oppdrag løses digitalt uansett hvor i landet du er. Der det trengs befaring eller fysisk oppfølging i Narvik og Ofoten, stiller vi opp på stedet.
+            </p>
           </ScrollReveal>
           <div className="flex flex-col lg:flex-row gap-0">
             {process.map((p, i) => (
